@@ -1,0 +1,8 @@
+### macOS ###
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+### files ###
+files/*
+!files/database.json

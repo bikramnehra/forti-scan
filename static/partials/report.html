@@ -1,0 +1,50 @@
+<div ng-if="reportData.Response!=='False'">
+  <table class="striped centered">
+      <thead>
+            <tr>
+                <th data-field="hashValue">Hash Value(md5)</th>
+                <th data-field="fortinetNames">Fortinet Detection Names</th>
+                <th data-field="numEngines">Number of Engines Detected</th>
+                <th data-field="scanDate">Scan Date</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>{{reportData.hashValue}}</td>
+              <td>{{reportData.fortinetNames}}</td>
+              <td>{{reportData.numEngines}}</td>
+              <td>{{reportData.scanDate}}</td>
+            </tr>
+          </tbody>
+  </table>
+</div>
+
+<div id="modal" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>File Already Analyzed</h4>
+      <p>The file you are trying to analyze is already scanned. Here are the results...</p>
+      <table class="highlight centered">
+      <thead>
+            <tr>
+                <th data-field="hashValue">Hash Value(md5)</th>
+                <th data-field="fortinetNames">Fortinet Detection Names</th>
+                <th data-field="numEngines">Number of Engines Detected</th>
+                <th data-field="scanDate">Scan Date</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>{{reportData.hashValue}}</td>
+              <td>{{reportData.fortinetNames}}</td>
+              <td>{{reportData.numEngines}}</td>
+              <td>{{reportData.scanDate}}</td>
+            </tr>
+          </tbody>
+  </table>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-light btn-flat red darken-2">OK</a>
+    </div>
+</div>

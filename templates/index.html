@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <head>
+    	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  		<title>fortiScan</title>
+
+      <!-- Open Sans Font-->
+  		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    	
+    	<!-- Stylesheets -->
+    	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		  <link rel="stylesheet" href="/static/css/style.css" />
+
+      <!-- JQuery -->
+		  <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+      <!-- Angularjs scripts-->
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+      <script src="http://code.angularjs.org/1.5.3/angular-route.min.js"></script>
+
+      <!-- Materialize scripts-->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.2/angular-materialize.min.js"></script>
+
+      <!-- Local Scripts-->
+      <script src="/static/js/app.js"></script>
+
+    </head>
+    
+    <body ng-app="myApp">
+    	<div ng-controller="MyCtrl">
+			   <div ng-view></div>
+			   <div id="report" ng-show="isShow" ng-model="reportData" ng-include="'../static/partials/report.html'"></div>
+		  </div>
+    </body>
+
+</html>
